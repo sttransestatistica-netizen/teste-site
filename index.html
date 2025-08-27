@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,6 +15,7 @@
         :root {
             --primary-green: #1B5E20;
             --cream: #FFFDFA;
+            --light-cream: #F5F2E0;
             --text-dark: #2C3E50;
             --white: #FFFFFF;
             --border-radius: 12px;
@@ -58,9 +60,22 @@
             object-fit: contain;
         }
 
+ 
+
+        .header-title {
+            flex: 1;
+            text-align: center;
+            color: var(--primary-green);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 1rem;
+            margin-top: 35px;
+        }
+
         .main {
             flex: 1;
             padding-top: 40px;
+            padding-bottom: rem;
             max-width: 1450px;
             margin: 0 auto;
             width: 100%;
@@ -73,6 +88,7 @@
             margin-bottom: 2rem;
             border: 2px solid var(--primary-green);
         }
+
 
         .section-header {
             display: flex;
@@ -151,9 +167,9 @@
             font-size: 1rem;
         }
 
-        
+   
         .footer {
-    border-top: 3px solid; 
+    border-top: 3px solid;
     border-image: linear-gradient(
         to right,
         yellow 33.4%,
@@ -215,12 +231,14 @@
             border-radius: var(--border-radius);
             overflow: hidden;
             margin-bottom: 2rem;
-            border: 2px solid var(--primary-green);
+            border: 2px solid #E8E2C6;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0;
             transition: all 0.3s ease;
         }
+
+     
 
         .news-featured-image {
             position: relative;
@@ -279,12 +297,104 @@
             line-height: 1.5;
             margin-bottom: 15px;
             opacity: 0.8;
+            style="
+            font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1.6;
+            color: #222222;
+            "
+        }
+
+        .news-card {
+            flex-direction: column !important;
+            align-items: stretch !important;
+            padding: 0 !important;
+            overflow: hidden;
+        }
+
+        .news-image {
+            position: relative;
+            width: 100%;
+            height: 140px;
+            overflow: hidden;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .news-card .service-card-text {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card .service-card-text p {
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin: 5px 0 10px 0;
+            line-height: 1.4;
+            flex: 1;
+        }
+
+        .news-card .service-card-text small {
+            color: var(--primary-green);
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: auto;
+        }
+
+        .news-card .service-card-text small i {
+            margin-right: 3px;
+        }
+
+        .news-pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--primary-green);
+            background: var(--cream);
+            color: var(--primary-green);
+            border-radius: 50%;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         
+
+      
         @media (max-width: 768px) {
             .header {
                 padding: 0 1rem;
+            }
+
+            .header-title {
+                font-size: 1rem;
             }
 
             .section-header {
@@ -299,6 +409,8 @@
             .service-section {
                 padding: 1.5rem;
             }
+
+  
 
             .news-featured {
                 grid-template-columns: 1fr;
@@ -319,6 +431,10 @@
         }
 
         @media (max-width: 480px) {
+            .header-title {
+                display: none;
+            }
+
             .logo {
                 height: 40px;
             }
@@ -328,6 +444,8 @@
                 text-align: center;
             }
         }
+
+        
     </style>
 </head>
 <body>
@@ -344,194 +462,191 @@
   });
 </script>
 
-    
+   
     <header class="header">
+    <a href="https://www.queimadas.pb.gov.br/" target="_blank" rel="noopener">
         <img src="https://images.weserv.nl/?url=drive.google.com/uc%3Fexport%3Dview%26id%3D1Nc6KgvZjYE9h2eAvwmm0QhfisXbtYV28&output=png&bg=ffffff" alt="Logo STTRANS" class="logo">
+</a>
+      
+
+          <a href="https://www.queimadas.pb.gov.br/" target="_blank" rel="noopener">
+        <div class="service-card" 
+     style="display: inline-flex; align-items: center; width: auto; padding: 5px 10px;
+            position: fixed; top: 5px; left: 50%; transform: translateX(-50%);
+            z-index: 1000; background: white; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
     
-       <a href="https://www.queimadas.pb.gov.br/" target="_blank" rel="noopener">
+    <div class="service-card-icon" 
+         style="width: 28px; height: 28px; font-size: 1rem; display: flex; align-items: center; justify-content: center;">
+        <i class="fas fa-home"></i>
+    </div>
+    
+    <div class="service-card-text" style="margin-left: -14px; font-size: 1rem;"></div>
+</div>
+</a>
+
+
+
+    <a href="https://www.queimadas.pb.gov.br/" target="_blank" rel="noopener">
         <img src="https://queimadas.pb.gov.br/storage/configuracoes/67b8a0e9b0ef81fhlt.png" alt="Logo Queimadas" class="logo">
-      </a>
+        </a>
+
     </header>
 
-    
+
+
+   
     <main class="main">
-        <!-- LINKS ÚTEIS -->
-        <section class="service-section">
-            <div class="section-header">
-                <div class="section-icon">
-                    <i class="fas fa-link"></i>
-                </div>
-                <h2 class="section-title">ACESSO RÁPIDO</h2>
-            </div>
-                
-            <div class="services-grid">
-                <a href="https://queimadas.gott.norteware.com.br/gott/publico/consulta-infracoes-veiculo" 
-                   class="service-card" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                    <div class="service-card-icon">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                    </div>
-                    <div class="service-card-text">Consulte e Pague suas Multas</div>
-                 </a>
-
-             <div class="service-card" onclick="showDevelopment()">
-                    <div class="service-card-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="service-card-text">Quem Somos (Em Breve)</div>
-                </div>
-
-                <a href="https://portaldatransparencia.publicsoft.com.br/sistemas/ContabilidadePublica/" 
-                   class="service-card" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                    <div class="service-card-icon">
-                        <i class="fas fa-magnifying-glass"></i>
-                    </div>
-                    <div class="service-card-text">Portal da Transparência</div>
-                </a>
-
-                <a href="https://transparencia.elmartecnologia.com.br/?e=312155" 
-                   class="service-card" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                    <div class="service-card-icon">
-                        <i class="fas fa-gavel"></i>
-                    </div>
-                    <div class="service-card-text">Licitações</div>
-                </a>
-
-                <div class="service-card" onclick="showDevelopment()">
-                    <div class="service-card-icon">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </div>
-                    <div class="service-card-text">Atendimento Via Whatsapp (Em Breve)</div>
-                </div>
-                
-                <div class="service-card" onclick="showDevelopment()">
-                    <div class="service-card-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <div class="service-card-text">Painel BI (Em Breve)</div>
-                </div>
-            </div>
-        </section>
+       
         
+       
+<section class="service-section">
+        </div>
+   
+    
+    <div class="news-container">
         
-        <section class="service-section">
-            <div class="section-header">
-                <div class="section-icon">
-                    <i class="fas fa-newspaper"></i>
-                </div>
-                <h2 class="section-title">NOTÍCIAS RECENTES</h2>
-            </div>
+
+<div class="news-meta">
             
-            <div class="news-container">
-              
-                <div class="news-featured">
-                    <div class="news-featured-image">
-                        <img src="https://media.istockphoto.com/id/1431411681/pt/vetorial/car-front-icon-silhouette-symbol-car-sign-in-linear-style.jpg?s=612x612&w=0&k=20&c=amxLmyjnH8CM-VF0sp53PEtQcFG6z1OpvGcZhJKa3r0=" alt="Notícia Principal">
-                        <div class="news-category">DESTAQUE</div>
-                    </div>
-                    <div class="news-featured-content">
-                        <div class="news-meta">
-                            <span><i class="fas fa-calendar-alt"></i> 15 de Agosto de 2025</span>
-                            <span><i class="fas fa-user"></i> STTRANS</span>
-                        </div>
-                        <h3 class="news-featured-title">Notícia em Destaque</h3>
-                        <p class="news-featured-excerpt">Descrição da notícia principal que está em destaque no portal da STTRANS...</p>
-                        <div class="service-card" style="display: inline-flex; width: auto; margin-top: 10px;">
-                            <div class="service-card-icon" style="width: 40px; height: 40px; font-size: 1rem;">
-                                <i class="fas fa-arrow-right"></i>
-                            </div>
-                            <div class="service-card-text">Ler Mais</div>
-                        </div>
-                    </div>
+                    <span><i class="fas fa-calendar-alt"></i> 15 de Agosto de 2025</span>
+                    <span><i class="fas fa-user"></i> STTRANS</span>
                 </div>
+                <h3 class="news-featured-title">Notícia em Destaque</h3>
+            <div class="news-featured-image">
+                <img src="https://media.istockphoto.com/id/1431411681/pt/vetorial/car-front-icon-silhouette-symbol-car-sign-in-linear-style.jpg?s=612x612&w=0&k=20&c=amxLmyjnH8CM-VF0sp53PEtQcFG6z1OpvGcZhJKa3r0=" alt="Notícia Principal">
+                <div class="news-category">Educação</div>
+            </div>
+            <div class="news-featured-content">
+                
+<p class="news-featured-excerpt">
+Encerramos a Semana Municipal do Trânsito com um café da manhã especial ao lado de quem fez tudo acontecer.
+Gratidão à equipe da STTRANS, e permissionários que compareceram.
+</p>
 
-                <div class="see-more-news" style="text-align: center; margin-top: 20px;">
-                    <a href="#" onclick="showDevelopment(); return false;" class="service-card" style="display: inline-flex; align-items: center; width: auto; padding: 10px 20px;">
-                        <div class="service-card-icon" style="width: 40px; height: 40px; font-size: 1rem;">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                        <div class="service-card-text">Veja Todas as Notícias (Em Breve)</div>
-                    </a>
-                </div>
-            </div> 
-        </section>
-
+ 
+            </div>
+        </div>
         
-        <section class="service-section">
-            <div class="section-header">
-                <div class="section-icon">
-                    <i class="fas fa-share-alt"></i>
-                </div>
-                <h2 class="section-title">REDES SOCIAIS</h2>
-            </div>
 
-            <div class="services-grid">
-                <a href="https://www.instagram.com/sttransqueimadas/" target="_blank" rel="noopener noreferrer" class="service-card">
-                    <div class="service-card-icon" style="background:#E1306C;">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <div class="service-card-text">Nosso Instagram</div>
-                </a>
+<div class="see-more-news" style="text-align: center; margin-top: 20px;" >
+    <a href="      "  onclick="showDevelopment(); return false;" class="service-card" style="display: inline-flex; align-items: center; width: auto; padding: 10px 20px;">
+        <div class="service-card-icon" style="width: 40px; height: 40px; font-size: 1rem;">
+            <i class="fas fa-arrow-right"></i>
+        </div>
+<div class="service-card-text">Veja Todas as Notícias (Em Breve)</div>
+       
+    </a>
+</div>
 
-                <a href="https://www.facebook.com/queimadaspmq" target="_blank" rel="noopener noreferrer" class="service-card">
-                    <div class="service-card-icon" style="background:#1877F2;">
-                        <i class="fab fa-facebook-f"></i>
-                    </div>
-                    <div class="service-card-text">Facebook da Prefeitura</div>
-                </a>
-
-                <a href="https://www.queimadas.pb.gov.br/" target="_blank" rel="noopener noreferrer" class="service-card">
-                    <div class="service-card-icon" style="background:#28a745;">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <div class="service-card-text">Site Oficial da Prefeitura</div>
-                </a>
-            </div>
-        </section>
+</div> 
+</section>
     </main>
 
-    
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3><i class="fas fa-building"></i> STTRANS</h3>
-                <p>Superintendência de Transportes e Trânsito de Queimadas</p>
-                <p>Queimadas - Paraíba</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3><i class="fas fa-map-marker-alt"></i> Endereço</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Rua Miguel Benicio de Melo, 74 - Centro, Queimadas</p>
-                <p><i class="fas fa-phone"></i> Telefone Para Contato: Em Breve</p>
-                <p><i class="fas fa-envelope"></i> E-mail: Em Breve</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3><i class="fas fa-clock"></i> Horário de Funcionamento</h3>
-                <p><i class="fas fa-calendar-day"></i> Segunda à Sexta</p>
-                <p><i class="fas fa-clock"></i> 07:00 às 14:00</p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
-                <img src="https://images.weserv.nl/?url=drive.google.com/uc%3Fexport%3Dview%26id%3D1Nc6KgvZjYE9h2eAvwmm0QhfisXbtYV28&output=png&bg=transparent" alt="Logo STTRANS" style="height: 60px; object-fit: contain;">
-            </div>
-            <p>© 2025 | Todos os direitos reservados</p>
-            <p><strong>Serviço Digital. Sua vida mais fácil!</strong></p>
-        </div>
-    </footer>
 
-    <script>
+
+<footer class="footer">
+
+
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3><i class="fas fa-building"></i> STTRANS</h3>
+            <p>Superintendência de Trânsito e Transportes de Queimadas</p>
+        </div>
         
+        <div class="footer-section">
+            <h3><i class="fas fa-map-marker-alt"></i> Endereço</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Rua Miguel Benicio de Melo, 74 - Centro, Queimadas</p>
+            <p><i class="fas fa-phone"></i> Telefone Para Contato: Em Breve</p>
+            <p><i class="fas fa-envelope"></i> E-mail: Em Breve</p>
+        </div>
+        
+        <div class="footer-section">
+            <h3><i class="fas fa-clock"></i> Horário de Funcionamento</h3>
+            <p><i class="fas fa-calendar-day"></i> Segunda à Sexta</p>
+            <p><i class="fas fa-clock"></i> 07:00 às 14:00</p>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        
+    <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+<img src="https://images.weserv.nl/?url=drive.google.com/uc%3Fexport%3Dview%26id%3D1Nc6KgvZjYE9h2eAvwmm0QhfisXbtYV28&output=png&bg=transparent" alt="Logo STTRANS" class="footer-logo" style="height: 60px; object-fit: contain;">
+    </div>
+        <p>© 2025 | Todos os direitos reservados</p>
+        <p><strong>Serviço Digital. Sua vida mais fácil!</strong></p>
+    </div>
+</footer>
+
+
+<div style="position: fixed; bottom: 5px; right: 20px; z-index: 1000; display: flex; flex-direction: column; align-items: center; gap: 5px;">
+
+   
+<div style="font-weight: 700; margin-bottom: 5px; text-align: center; color: #FFC107;">Compartilhe:</div>
+
+    
+    <div style="display: flex; gap: 10px;">
+
+    
+        <a href="#" onclick="shareWhatsApp()" class="service-card" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;">
+            <i class="fab fa-whatsapp" style="font-size: 1.2rem; color: #25d366;"></i>
+        </a>
+
+        
+        <a href="#" onclick="shareFacebook()" class="service-card" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;">
+            <i class="fab fa-facebook-f" style="font-size: 1.2rem; color: #3b5998;"></i>
+        </a>
+
+        
+        <a href="#" onclick="shareTelegram()" class="service-card" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;">
+            <i class="fab fa-telegram-plane" style="font-size: 1.2rem; color: #0088cc;"></i>
+        </a>
+
+       
+        <a href="#" onclick="shareLinkedIn()" class="service-card" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;">
+            <i class="fab fa-linkedin-in" style="font-size: 1.2rem; color: #0077b5;"></i>
+        </a>
+
+        
+        <button onclick="copyLink()" class="service-card" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0; border: none; background: #6c757d; color: white; cursor: pointer;">
+            <i class="fas fa-link" style="font-size: 1.2rem;"></i>
+        </button>
+
+    </div>
+</div>
+
+<script>
+    function getNewsLink() {
+        return window.location.href;
+    }
+
+    function shareFacebook() {
+        const url = encodeURIComponent(getNewsLink());
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+    }
+ 
+    }
+    function shareWhatsApp() {
+        const url = encodeURIComponent(getNewsLink());
+        const text = encodeURIComponent(document.title);
+        window.open(`https://api.whatsapp.com/send?text=${text}%20${url}`, '_blank');
+    }
+    function shareTelegram() {
+        const url = encodeURIComponent(getNewsLink());
+        const text = encodeURIComponent(document.title);
+        window.open(`https://t.me/share/url?url=${url}&text=${text}`, '_blank');
+    }
+    function shareLinkedIn() {
+        const url = encodeURIComponent(getNewsLink());
+        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+    }
+    function copyLink() {
+        navigator.clipboard.writeText(getNewsLink());
+    }
+
         function showDevelopment() {
             alert('🚧 Funcionalidade em desenvolvimento!\n\nEm breve este serviço estará disponível.');
         }
+
     </script>
 </body>
 </html>
