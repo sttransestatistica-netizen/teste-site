@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -16,7 +14,6 @@
         :root {
             --primary-green: #1B5E20;
             --cream: #FFFDFA;
-            --light-cream: #F5F2E0;
             --text-dark: #2C3E50;
             --white: #FFFFFF;
             --border-radius: 12px;
@@ -61,18 +58,6 @@
             object-fit: contain;
         }
 
- 
-
-        .header-title {
-            flex: 1;
-            text-align: center;
-            color: var(--primary-green);
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin: 0 1rem;
-            margin-top: 35px;
-        }
-
         .main {
             flex: 1;
             padding-top: 40px;
@@ -87,40 +72,6 @@
             padding: 2rem;
             margin-bottom: 2rem;
             border: 2px solid var(--primary-green);
-        }
-
-
-        .section-header {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .section-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--primary-green);
-            border-radius: var(--border-radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            flex-shrink: 0;
-        }
-
-        .section-title {
-            color: var(--primary-green);
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 0;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
         }
 
         .service-card {
@@ -166,26 +117,24 @@
             font-weight: 600;
             font-size: 1rem;
         }
-
    
         .footer {
-    border-top: 3px solid;
-    border-image: linear-gradient(
-        to right,
-        yellow 33.4%,
-        green 33.4%, green 66.6%,
-        red 66.6%
-    ) 1; 
-    background: linear-gradient(135deg, var(--primary-green) 0%, #1e4a5f 100%);
-    color: white;
-    padding: 3rem 0 1rem 0;
-    margin-top: auto;
-    width: 100vw !important;
-    max-width: 100vw !important;
-    margin-left: calc(50% - 50vw) !important;
-    margin-bottom: 0 !important;
-}
-
+            border-top: 3px solid;
+            border-image: linear-gradient(
+                to right,
+                yellow 33.4%,
+                green 33.4%, green 66.6%,
+                red 66.6%
+            ) 1; 
+            background: linear-gradient(135deg, var(--primary-green) 0%, #1e4a5f 100%);
+            color: white;
+            padding: 3rem 0 1rem 0;
+            margin-top: auto;
+            width: 100vw !important;
+            max-width: 100vw !important;
+            margin-left: calc(50% - 50vw) !important;
+            margin-bottom: 0 !important;
+        }
 
         .footer-content {
             max-width: 1200px;
@@ -220,27 +169,23 @@
             border-top: 1px solid rgba(255,255,255,0.2);
             opacity: 0.8;
         }
-
         
         .news-container {
             max-width: 100%;
         }
 
-     
-
         .news-featured-image {
             position: relative;
             overflow: hidden;
-    padding-left: 2%;  
-    padding-right: 2%;  
-
+            padding-left: 2%;  
+            padding-right: 2%;  
         }
 
         .news-featured-image img {
             width: 100%;
             height: 250px;
             object-fit: cover;
-    padding-right: 2%;  
+            padding-right: 2%;  
         }
 
         .news-category {
@@ -254,8 +199,8 @@
             font-size: 12px;
             font-weight: 600;
             text-transform: uppercase;
-    padding-left: 2%;  
-    padding-right: 2%;  
+            padding-left: 2%;  
+            padding-right: 2%;  
         }
 
         .news-featured-content {
@@ -265,21 +210,19 @@
             justify-content: center;
         }
 
-
         .news-meta {
             display: flex;
             gap: 15px;
             margin-bottom: 10px;
             font-size: 13px;
             color: #666;
-padding-left: 2%;   
-    padding-right: 2%;  
+            padding-left: 2%;   
+            padding-right: 2%;  
         }
 
         .news-meta i {
             color: var(--primary-green);
             margin-right: 5px;
-
         }
 
         .news-featured-title {
@@ -288,11 +231,11 @@ padding-left: 2%;
             font-weight: 700;
             margin-bottom: 10px;
             line-height: 1.3;
-padding-left: 2%;   
-    padding-right: 2%;  
+            padding-left: 2%;   
+            padding-right: 2%;  
         }
 
-      .news-featured-excerpt {
+        .news-featured-excerpt {
             color: #222222;
             line-height: 1.6;
             margin-bottom: 15px;
@@ -301,119 +244,18 @@ padding-left: 2%;
             font-size: 1.1rem;
             font-weight: 500;
             text-align: justify;
-    padding-right: 2% !important;
+            padding-right: 2% !important;
         }
 
-        .news-card {
-            flex-direction: column !important;
-            align-items: stretch !important;
-            padding: 0 !important;
-            overflow: hidden;
-        }
-
-        .news-image {
-            position: relative;
-            width: 100%;
-            height: 140px;
-            overflow: hidden;
-        }
-
-        .news-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .news-badge {
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            background: rgba(0,0,0,0.8);
-            color: white;
-            padding: 3px 8px;
-            border-radius: 10px;
-            font-size: 10px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .news-card .service-card-text {
-            padding: 15px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .news-card .service-card-text p {
-            color: #666;
-            font-size: 0.9rem;
-            font-weight: 400;
-            margin: 5px 0 10px 0;
-            line-height: 1.4;
-            flex: 1;
-        }
-
-        .news-card .service-card-text small {
-            color: var(--primary-green);
-            font-size: 0.8rem;
-            font-weight: 500;
-            margin-top: auto;
-        }
-
-        .news-card .service-card-text small i {
-            margin-right: 3px;
-        }
-
-        .news-pagination {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 25px;
-        }
-
-        .page-btn {
-            width: 40px;
-            height: 40px;
-            border: 2px solid var(--primary-green);
-            background: var(--cream);
-            color: var(--primary-green);
-            border-radius: 50%;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        
-
-      
         @media (max-width: 768px) {
             .header {
                 padding: 0 1rem;
-            }
-
-            .header-title {
-                font-size: 1rem;
-            }
-
-            .section-header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
             }
 
             .service-section {
                 padding: 1.5rem;
             }
 
-  
-
-            .news-featured {
-                grid-template-columns: 1fr;
-            }
-            
             .news-featured-image img {
                 height: 200px;
             }
@@ -429,10 +271,6 @@ padding-left: 2%;
         }
 
         @media (max-width: 480px) {
-            .header-title {
-                display: none;
-            }
-
             .logo {
                 height: 40px;
             }
@@ -442,8 +280,6 @@ padding-left: 2%;
                 text-align: center;
             }
         }
-
-        
     </style>
 </head>
 <body>
@@ -460,138 +296,101 @@ padding-left: 2%;
   });
 </script>
 
-   
-    <header class="header">
-            <a href="https://sttransestatistica-netizen.github.io/teste-site3/" style="text-decoration: none; color: inherit;">
-  <img src="https://images.weserv.nl/?url=drive.google.com/uc%3Fexport%3Dview%26id%3D1Nc6KgvZjYE9h2eAvwmm0QhfisXbtYV28&output=png&bg=ffffff" 
-       alt="Logo STTRANS" class="logo" style="display: block;">
-</a>
+<header class="header">
+    <a href="https://sttransestatistica-netizen.github.io/teste-site3/" style="text-decoration: none; color: inherit;">
+        <img src="https://images.weserv.nl/?url=drive.google.com/uc%3Fexport%3Dview%26id%3D1Nc6KgvZjYE9h2eAvwmm0QhfisXbtYV28&output=png&bg=ffffff" 
+             alt="Logo STTRANS" class="logo" style="display: block;">
+    </a>
 
-
-            <a href="https://sttransestatistica-netizen.github.io/teste-site3/"  style="text-decoration: none; color: inherit;">
-            <div class="service-card" 
-                 style="display: inline-flex; align-items: center; width: auto; padding: 5px 10px;
-                        position: fixed; top: 5px; left: 50%; transform: translateX(-50%);
-                        z-index: 1000; background: white; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
-                <div class="service-card-icon" 
-                     style="width: 28px; height: 28px; font-size: 1rem; display: flex; align-items: center; justify-content: center;">
-                    <i class="fas fa-home"></i>
-                </div>
-                <div class="service-card-text" style="margin-left: -14px; font-size: 1rem;"></div>
+    <a href="https://sttransestatistica-netizen.github.io/teste-site3/"  style="text-decoration: none; color: inherit;">
+        <div class="service-card" 
+             style="display: inline-flex; align-items: center; width: auto; padding: 5px 10px;
+                    position: fixed; top: 5px; left: 50%; transform: translateX(-50%);
+                    z-index: 1000; background: white; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+            <div class="service-card-icon" 
+                 style="width: 28px; height: 28px; font-size: 1rem; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-home"></i>
             </div>
-        </a>
-
-
-
+            <div class="service-card-text" style="margin-left: -14px; font-size: 1rem;"></div>
+        </div>
+    </a>
 
     <a href="https://www.queimadas.pb.gov.br/" target="_blank" rel="noopener">
         <img src="https://queimadas.pb.gov.br/storage/configuracoes/67b8a0e9b0ef81fhlt.png" alt="Logo Queimadas" class="logo" style="display: block;">
-        </a>
+    </a>
+</header>
 
-    </header>
-
-
-
-   
-    <main class="main">
-       
-        
-       
-<section class="service-section">
-        </div>
-   
-    
-    <div class="news-container">
-        
-
-<div class="news-meta">
-            
-                    <span><i class="fas fa-calendar-alt"></i> 25 de Julho de 2025</span>
-                    <span><i class="fas fa-user"></i> STTRANS</span>
-                </div>
-                <h3 class="news-featured-title">STTRANS Encerra Semana Municipal do Trânsito em Queimadas.</h3>
+<main class="main">
+    <section class="service-section">
+        <div class="news-container">
+            <div class="news-meta">
+                <span><i class="fas fa-calendar-alt"></i> 25 de Julho de 2025</span>
+                <span><i class="fas fa-user"></i> STTRANS</span>
+            </div>
+            <h3 class="news-featured-title">STTRANS Encerra Semana Municipal do Trânsito em Queimadas.</h3>
 
             <div class="news-featured-image">
-                
                 <div class="news-category">Educação</div>
-<img src="https://images.weserv.nl/?url=drive.google.com/uc%3Fexport%3Dview%26id%3D19o9y0-leu2fD6ISkwJPCOUrvhPsXRG1b&output=png&bg=ffffff" alt="Notícia Principal" style=" height: auto;width: 350px;">
+                <img src="https://images.weserv.nl/?url=drive.google.com/uc%3Fexport%3Dview%26id%3D19o9y0-leu2fD6ISkwJPCOUrvhPsXRG1b&output=png&bg=ffffff" alt="Notícia Principal" style=" height: auto;width: 350px;">
             </div>
-
 
             <div class="news-featured-content">
-                
-<p class="news-featured-excerpt">
-A Superintendência de Trânsito e Transportes (STTRANS) de Queimadas realizou, entre os dias 21 e 25 de julho, a Semana Municipal do Trânsito. A programação contou com pit stops educativos, palestras em escolas, ações em parceria com a PRF e um café da manhã especial para permissionários.
-</p>
+                <p class="news-featured-excerpt">
+                    A Superintendência de Trânsito e Transportes (STTRANS) de Queimadas realizou, entre os dias 21 e 25 de julho, a Semana Municipal do Trânsito. A programação contou com pit stops educativos, palestras em escolas, ações em parceria com a PRF e um café da manhã especial para permissionários.
+                </p>
 
-<p class="news-featured-excerpt">
-Entre as atividades, destacou-se a palestra do educador de trânsito Ranyere Saoli na Escola Municipal João Ferraz, além da participação do vice prefeito Ricardo Lucena no encerramento.
-</p>
+                <p class="news-featured-excerpt">
+                    Entre as atividades, destacou-se a palestra do educador de trânsito Ranyere Saoli na Escola Municipal João Ferraz, além da participação do vice prefeito Ricardo Lucena no encerramento.
+                </p>
 
-<p class="news-featured-excerpt">
-O superintendente Salomão Augusto ressaltou que o evento reforça o compromisso da STTRANS com a educação para o trânsito e a construção de uma mobilidade mais segura e consciente.
-</p>
-    <img src="https://images.weserv.nl/?url=https%3A%2F%2Fdrive.google.com%2Fuc%3Fexport%3Dview%26id%3D19ql1-klgI-RrXyToCVYJEKVJRXW1mc-d" style=" height: auto;width: 330px;">
+                <p class="news-featured-excerpt">
+                    O superintendente Salomão Augusto ressaltou que o evento reforça o compromisso da STTRANS com a educação para o trânsito e a construção de uma mobilidade mais segura e consciente.
+                </p>
+                <img src="https://images.weserv.nl/?url=https%3A%2F%2Fdrive.google.com%2Fuc%3Fexport%3Dview%26id%3D19ql1-klgI-RrXyToCVYJEKVJRXW1mc-d" style=" height: auto;width: 330px;">
+            </div>
 
+            <div style="width: 100%; display: flex; justify-content: flex-end; margin-top: 20px;">
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 5px;">
+                    <div style="font-weight: 700; margin-bottom: 5px; text-align: center; color: RED;">Compartilhe:</div>
 
- 
+                    <div style="display: flex; gap: 10px;">
+                        <a href="#" onclick="shareWhatsApp()" class="service-card" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;">
+                            <i class="fab fa-whatsapp" style="font-size: 1.2rem; color: #25d366;"></i>
+                        </a>
+
+                        <a href="#" onclick="shareFacebook()" class="service-card" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;">
+                            <i class="fab fa-facebook-f" style="font-size: 1.2rem; color: #3b5998;"></i>
+                        </a>
+
+                        <a href="#" onclick="shareTelegram()" class="service-card" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;">
+                            <i class="fab fa-telegram-plane" style="font-size: 1.2rem; color: #0088cc;"></i>
+                        </a>
+
+                        <a href="#" onclick="shareLinkedIn()" class="service-card" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;">
+                            <i class="fab fa-linkedin-in" style="font-size: 1.2rem; color: #0077b5;"></i>
+                        </a>
+
+                        <button onclick="copyLink()" class="service-card" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0; border: none; background: #6c757d; color: white; cursor: pointer;">
+                            <i class="fas fa-link" style="font-size:1.2rem ;max-font-size:1.2rem;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="see-more-news" style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
+                <a href="#" onclick="showDevelopment(); return false;" class="service-card" 
+                   style="display: flex; align-items: center; justify-content: center; padding: 10px 20px; margin: 0 auto;">
+                    <div class="service-card-icon" style="width: 40px; height: 40px; font-size: 1rem; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="service-card-text">Veja Todas as Notícias (Em Breve)</div>
+                </a>
             </div>
         </div>
-        
-
-<div class="see-more-news" style="text-align: center; margin-top: 20px;" >
-    <a href="      "  onclick="showDevelopment(); return false;" class="service-card" style="display: inline-flex; align-items: center; width: auto; padding: 10px 20px;">
-        <div class="service-card-icon" style="width: 40px; height: 40px; font-size: 1rem;">
-            <i class="fas fa-arrow-right"></i>
-        </div>
-<div class="service-card-text">Veja Todas as Notícias (Em Breve)</div>
-       
-    </a>
-</div>
-
-</div> 
-
-<div style="width: 100%; display: flex; justify-content: flex-end;margin-top: 20px;">
-  <div style="display: flex; flex-direction: column; align-items: center; gap: 5px;">
-    
-<div style="font-weight: 700; margin-bottom: 5px; text-align: center; color: RED;">Compartilhe:</div>
-
-    
-    <div style="display: flex; gap: 10px;">
-
-    
-        <a href="#" onclick="shareWhatsApp()" class="service-card" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;">
-            <i class="fab fa-whatsapp" style="font-size: 1.2rem; color: #25d366;"></i>
-        </a>
-
-        
-        <a href="#" onclick="shareFacebook()" class="service-card" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;">
-            <i class="fab fa-facebook-f" style="font-size: 1.2rem; color: #3b5998;"></i>
-        </a>
-
-        
-        <a href="#" onclick="shareTelegram()" class="service-card" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;">
-            <i class="fab fa-telegram-plane" style="font-size: 1.2rem; color: #0088cc;"></i>
-        </a>
-
-       
-        <a href="#" onclick="shareLinkedIn()" class="service-card" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;">
-            <i class="fab fa-linkedin-in" style="font-size: 1.2rem; color: #0077b5;"></i>
-        </a>
-
-        
-        <button onclick="copyLink()" class="service-card" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0; border: none; background: #6c757d; color: white; cursor: pointer;">
-            <i class="fas fa-link" style="font-size:1.2rem ;max-font-size:1.2rem;"></i>
-        </button>
-
-</section>
-    </main>
-
-
+    </section>
+</main>
 
 <footer class="footer">
-
-
     <div class="footer-content">
         <div class="footer-section">
             <h3><i class="fas fa-building"></i> STTRANS</h3>
@@ -613,56 +412,53 @@ O superintendente Salomão Augusto ressaltou que o evento reforça o compromisso
     </div>
     
     <div class="footer-bottom">
-        
-    <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
-<img src="https://images.weserv.nl/?url=drive.google.com/uc%3Fexport%3Dview%26id%3D1Nc6KgvZjYE9h2eAvwmm0QhfisXbtYV28&output=png&bg=transparent" alt="Logo STTRANS" class="footer-logo" style="height: 60px; object-fit: contain;">
-    </div>
+        <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="https://images.weserv.nl/?url=drive.google.com/uc%3Fexport%3Dview%26id%3D1Nc6KgvZjYE9h2eAvwmm0QhfisXbtYV28&output=png&bg=transparent" alt="Logo STTRANS" class="footer-logo" style="height: 60px; object-fit: contain;">
+        </div>
         <p>© 2025 | Todos os direitos reservados</p>
         <p><strong>Serviço Digital. Sua vida mais fácil!</strong></p>
     </div>
 </footer>
 
-
 <script>
     function getNewsLink() {
-    return window.location.href;
-}
+        return window.location.href;
+    }
 
-function getNewsTitle() {
-    const titleElement = document.querySelector('.news-featured-title');
-    return titleElement ? titleElement.textContent : document.title;
-}
+    function getNewsTitle() {
+        const titleElement = document.querySelector('.news-featured-title');
+        return titleElement ? titleElement.textContent : document.title;
+    }
 
-function shareFacebook() {
-    const url = encodeURIComponent(getNewsLink());
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
-}
+    function shareFacebook() {
+        const url = encodeURIComponent(getNewsLink());
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+    }
 
-function shareWhatsApp() {
-    const url = encodeURIComponent(getNewsLink());
-    const text = encodeURIComponent(`*${getNewsTitle()}*`); 
-    window.open(`https://api.whatsapp.com/send?text=${text}%20${url}`, '_blank');
-}
+    function shareWhatsApp() {
+        const url = encodeURIComponent(getNewsLink());
+        const text = encodeURIComponent(`*${getNewsTitle()}*`); 
+        window.open(`https://api.whatsapp.com/send?text=${text}%20${url}`, '_blank');
+    }
 
-function shareTelegram() {
-    const url = encodeURIComponent(getNewsLink());
-    const text = encodeURIComponent(getNewsTitle());
-    window.open(`https://t.me/share/url?url=${url}&text=${text}`, '_blank');
-}
+    function shareTelegram() {
+        const url = encodeURIComponent(getNewsLink());
+        const text = encodeURIComponent(getNewsTitle());
+        window.open(`https://t.me/share/url?url=${url}&text=${text}`, '_blank');
+    }
 
-function shareLinkedIn() {
-    const url = encodeURIComponent(getNewsLink());
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
-}
+    function shareLinkedIn() {
+        const url = encodeURIComponent(getNewsLink());
+        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+    }
 
-function copyLink() {
-    navigator.clipboard.writeText(getNewsLink());
-}
+    function copyLink() {
+        navigator.clipboard.writeText(getNewsLink());
+    }
 
-        function showDevelopment() {
-            alert('🚧 Funcionalidade em desenvolvimento!\n\nEm breve este serviço estará disponível.');
-        }
-
-    </script>
+    function showDevelopment() {
+        alert('🚧 Funcionalidade em desenvolvimento!\n\nEm breve este serviço estará disponível.');
+    }
+</script>
 </body>
 </html>
