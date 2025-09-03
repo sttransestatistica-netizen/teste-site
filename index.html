@@ -34,6 +34,7 @@
         min-height: 100vh;
       }
 
+      
       .main {
         flex: 1;
         padding-top: 40px;
@@ -94,6 +95,7 @@
         font-size: 1rem;
       }
 
+      
       .news-container {
         max-width: 100%;
       }
@@ -172,6 +174,7 @@
       }
 
       @media (max-width: 768px) {
+        
         .service-section {
           padding: 1.5rem;
         }
@@ -189,19 +192,37 @@
           gap: 5px;
         }
       }
+
+      @media (max-width: 480px) {
+        .logo {
+          height: 40px;
+        }
+
+
       }
     </style>
 
+
   </head>
 
+
+    
   <body>
 
     <div id="header-placeholder"></div>
+
 
     <div vw class="enabled">
       <div vw-access-button class="active"></div>
       <div vw-plugin-wrapper></div>
     </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app', {
+        avatar: 'Icaro'
+      });
+    </script>
 
     <main class="main">
       <section class="service-section">
@@ -214,7 +235,7 @@
 
           <div class="news-featured-image">
             <div class="news-category">Educação</div>
-            <img src="https://images.weserv.nl/?url=drive.google.com/uc%3Fexport%3Dview%26id%3D19o9y0-leu2fD6ISkwJPCOUrvhPsXRG1b&output=png&bg=ffffff" alt="Notícia Principal" loading="lazy" style=" height: auto;width: 350px;">
+            <img src="https://images.weserv.nl/?url=drive.google.com/uc%3Fexport%3Dview%26id%3D19o9y0-leu2fD6ISkwJPCOUrvhPsXRG1b&output=png&bg=ffffff" alt="Notícia Principal" style=" height: auto;width: 350px;">
           </div>
 
           <div class="news-featured-content">
@@ -229,7 +250,7 @@
             <p class="news-featured-excerpt">
               O superintendente Salomão Augusto ressaltou que o evento reforça o compromisso da STTRANS com a educação para o trânsito e a construção de uma mobilidade mais segura e consciente.
             </p>
-            <img src="https://images.weserv.nl/?url=https%3A%2F%2Fdrive.google.com%2Fuc%3Fexport%3Dview%26id%3D19ql1-klgI-RrXyToCVYJEKVJRXW1mc-d" loading="lazy" style=" height: auto;width: 330px;">
+            <img src="https://images.weserv.nl/?url=https%3A%2F%2Fdrive.google.com%2Fuc%3Fexport%3Dview%26id%3D19ql1-klgI-RrXyToCVYJEKVJRXW1mc-d" style=" height: auto;width: 330px;">
           </div>
 
           <div style="width: 100%; display: flex; justify-content: flex-end; margin-top: 20px;">
@@ -260,37 +281,26 @@
             </div>
           </div>
 
-          <div class="see-more-news" style="text-align: center; margin-top: 20px;">
-            <a href="https://sttransestatistica-netizen.github.io/teste-site5/" return false;" class="service-card" style="display: inline-flex; align-items: center; width: auto; padding: 10px 20px;">
-              <div class="service-card-icon" style="width: 40px; height: 40px; font-size: 1rem;">
-                <i class="fas fa-arrow-right"></i>
-              </div>
-              <div class="service-card-text">Veja Todas as Notícias</div>
-            </a>
-          </div>
-        </div>
+        
+
+             <div class="see-more-news" style="text-align: center; margin-top: 20px;">
+                <a href="https://sttransestatistica-netizen.github.io/teste-site5/" return false;" class="service-card" style="display: inline-flex; align-items: center; width: auto; padding: 10px 20px;">
+                    <div class="service-card-icon" style="width: 40px; height: 40px; font-size: 1rem;">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="service-card-text">Veja Todas as Notícias</div>
+                </a>
+            </div>
+            </div>
       </section>
 
-      <div id="footer"></div>
+             <div id="footer"></div>
 
     </main>
 
-    <script>
-      // 1. Cache simples para evitar requests repetidos
-      const cache = {};
+ 
 
-      function fetchWithCache(url) {
-        if (cache[url]) {
-          return Promise.resolve(cache[url]);
-        }
-        return fetch(url)
-          .then(res => res.text())
-          .then(data => {
-            cache[url] = data;
-            return data;
-          });
-      }
-      // 2. Funções de compartilhamento e utilidades
+    <script>
       function getNewsLink() {
         return window.location.href;
       }
@@ -323,48 +333,18 @@
       }
 
       function copyLink() {
-        navigator.clipboard.writeText(getNewsLink())
-          .then(() => {
-            // Opcional: mostrar feedback visual
-            console.log('Link copiado com sucesso!');
-          })
-          .catch(err => {
-            console.warn('Erro ao copiar link:', err);
-          });
+        navigator.clipboard.writeText(getNewsLink());
       }
-      // 3. VLibras carregado de forma diferida
-      window.addEventListener('load', () => {
-        const script = document.createElement('script');
-        script.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
-        script.onload = () => {
-          new window.VLibras.Widget('https://vlibras.gov.br/app', {
-            avatar: 'Icaro'
-          });
-        };
-        script.onerror = () => {
-          console.warn('Falha ao carregar VLibras');
-        };
-        document.head.appendChild(script);
-      });
-      // 4. Carregamento paralelo de header e footer com cache
-      Promise.allSettled([
-        fetchWithCache("https://sttransestatistica-netizen.github.io/teste-site6/")
-        .then(data => {
-          const footer = document.getElementById("footer");
-          if (footer) footer.innerHTML = data;
-        }),
-        fetchWithCache("https://sttransestatistica-netizen.github.io/teste-site7/")
-        .then(html => {
-          const header = document.getElementById("header-placeholder");
-          if (header) header.innerHTML = html;
-        })
-      ]).then(results => {
-        results.forEach((result, index) => {
-          if (result.status === 'rejected') {
-            console.warn(`Falha ao carregar ${index === 0 ? 'footer' : 'header'}:`, result.reason);
-          }
-        });
-      });
+
+       fetch("https://sttransestatistica-netizen.github.io/teste-site6/")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+
+       fetch("https://sttransestatistica-netizen.github.io/teste-site7/")
+    .then(r => r.text())
+    .then(html => {
+        document.getElementById("header-placeholder").innerHTML = html;
+    });
     </script>
   </body>
 
