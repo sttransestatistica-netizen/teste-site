@@ -34,7 +34,6 @@
         min-height: 100vh;
       }
 
-      
       .main {
         flex: 1;
         padding-top: 40px;
@@ -95,7 +94,6 @@
         font-size: 1rem;
       }
 
-      
       .news-container {
         max-width: 100%;
       }
@@ -174,7 +172,6 @@
       }
 
       @media (max-width: 768px) {
-        
         .service-section {
           padding: 1.5rem;
         }
@@ -197,20 +194,14 @@
         .logo {
           height: 40px;
         }
-
-
       }
     </style>
 
-
   </head>
 
-
-    
   <body>
 
     <div id="header-placeholder"></div>
-
 
     <div vw class="enabled">
       <div vw-access-button class="active"></div>
@@ -250,7 +241,10 @@
             <p class="news-featured-excerpt">
               O superintendente Salomão Augusto ressaltou que o evento reforça o compromisso da STTRANS com a educação para o trânsito e a construção de uma mobilidade mais segura e consciente.
             </p>
-            <img src="https://images.weserv.nl/?url=https%3A%2F%2Fdrive.google.com%2Fuc%3Fexport%3Dview%26id%3D19ql1-klgI-RrXyToCVYJEKVJRXW1mc-d" style=" height: auto;width: 330px;">
+          </div>
+
+          <div class="news-featured-image">
+            <img src="https://images.weserv.nl/?url=https%3A%2F%2Fdrive.google.com%2Fuc%3Fexport%3Dview%26id%3D19ql1-klgI-RrXyToCVYJEKVJRXW1mc-d" style=" height: auto;width: 350px;">
           </div>
 
           <div style="width: 100%; display: flex; justify-content: flex-end; margin-top: 20px;">
@@ -281,24 +275,20 @@
             </div>
           </div>
 
-        
-
-             <div class="see-more-news" style="text-align: center; margin-top: 20px;">
-                <a href="https://sttransestatistica-netizen.github.io/teste-site5/" return false;" class="service-card" style="display: inline-flex; align-items: center; width: auto; padding: 10px 20px;">
-                    <div class="service-card-icon" style="width: 40px; height: 40px; font-size: 1rem;">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                    <div class="service-card-text">Veja Todas as Notícias</div>
-                </a>
-            </div>
-            </div>
+          <div class="see-more-news" style="text-align: center; margin-top: 20px;">
+            <a href="https://sttransestatistica-netizen.github.io/teste-site5/" return false;" class="service-card" style="display: inline-flex; align-items: center; width: auto; padding: 10px 20px;">
+              <div class="service-card-icon" style="width: 40px; height: 40px; font-size: 1rem;">
+                <i class="fas fa-arrow-right"></i>
+              </div>
+              <div class="service-card-text">Veja Todas as Notícias</div>
+            </a>
+          </div>
+        </div>
       </section>
 
-             <div id="footer"></div>
+      <div id="footer"></div>
 
     </main>
-
- 
 
     <script>
       function getNewsLink() {
@@ -335,16 +325,14 @@
       function copyLink() {
         navigator.clipboard.writeText(getNewsLink());
       }
-
-       fetch("https://sttransestatistica-netizen.github.io/teste-site6/")
-      .then(res => res.text())
-      .then(data => document.getElementById("footer").innerHTML = data);
-
-       fetch("https://sttransestatistica-netizen.github.io/teste-site7/")
-    .then(r => r.text())
-    .then(html => {
-        document.getElementById("header-placeholder").innerHTML = html;
-    });
+      fetch("https://sttransestatistica-netizen.github.io/teste-site6/")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+      fetch("https://sttransestatistica-netizen.github.io/teste-site7/")
+        .then(r => r.text())
+        .then(html => {
+          document.getElementById("header-placeholder").innerHTML = html;
+        });
     </script>
   </body>
 
