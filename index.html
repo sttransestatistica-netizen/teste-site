@@ -328,10 +328,7 @@
       fetch("https://sttransestatistica-netizen.github.io/teste-site7/")
         .then(r => r.text())
         .then(html => {
-          const headerElement = document.getElementById("header-placeholder");
-          if (headerElement) {
-            headerElement.innerHTML = html;
-          }
+          document.getElementById("header-placeholder").innerHTML = html;
         });
     </script>
   </body>
